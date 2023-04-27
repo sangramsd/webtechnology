@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Assig1</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        var Empdetail = []
+        function EmpInput(){
+           
+            var EmpName = $("#EmpName").val()
+			var gender = $(".gender:checked").val()
+			
+            var date_of_birth = $("#date_of_birth").val()
+            var detail = {
+                EmpName: EmpName,
+                gender: gender,
+                date_of_birth: date_of_birth,
+            }
+            Empdetail.push(detail)
+        }
+        function Empout(){
+            var tableStr = ""
+        
+
+        for (let i = 0; i < Empdetail.length; i++) {
+            tableStr = tableStr + "</td><td>" + Empdetail[i].EmpName + "</td><td>" + Empdetail[i].gender + "</td><td>" + Empdetail[i].date_of_birth + "</td></tr>"
+        }
+        
+        $("#table-body").html(tableStr)
+    }
+    $(document).ready(function(){
+			$("#save-btn").click(EmpInput)
+			$("#display-btn").click(Empout)
+		})
+    
+    </script>
+</head>
+
+<body>
+	<input type="text"  id="EmpName" placeholder="Enter Name ">
+    <br>
+    Gender
+	<input type="radio" class="gender" name="gender" value="male" >Male
+	<input type="radio" class="gender" name="gender" value="female" >Female
+	<input type="radio" class="gender" name="gender" value="others">Others
+    <br>
+    <input type="date"  id="date_of_birth" placeholder="enter DOB">
+	<button id="save-btn">Save</button>
+	<button id="display-btn">display</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>Employee Name</td>
+				<td>gender </td>
+				<td>DOB</td>
+			</tr>			
+		</thead>
+		<tbody id="table-body">
+				
+		</tbody>
+	</table>
+</body>
+
+</html>

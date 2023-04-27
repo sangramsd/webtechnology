@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assig2</title>
+    <script>
+        var Empdetail = []
+        function EmpInput(){
+        for (var i = 0; i < 3; i++) {
+            var Id = prompt("Enter Id No." + i)
+            var Name = prompt("Enter name" + i)
+            var Phone = prompt("Enter Phone" + i)
+            var Salary = prompt("Enter Salary" + i)
+            var detail = {
+                Id: Id,
+                Name: Name,
+                Phone: Phone,
+                Salary: Salary,
+            }
+            Empdetail.push(detail)
+        }
+    }
+        function Empout(){
+        var htmlStr = "<table border=1><tr><td>Id No.</td><td>Name</td><td>Phone</td><td>Salary</td></tr>"
+
+        for (let i = 0; i < Empdetail.length; i++) {
+            htmlStr = htmlStr + "<tr><td>" + Empdetail[i].Id + "</td><td>" + Empdetail[i].Name + "</td><td>" + Empdetail[i].Phone + "</td><td>" + Empdetail[i].Salary + "</td></tr>"
+        }
+        htmlStr = htmlStr + "</table>"
+        document.write(htmlStr)
+    }
+    EmpInput()
+    Empout()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+var mod=require("./day21_module1.js")
+mod.palindrome("sangram")
+var a= mod.Concat("sang","ram")
+console.log(a)
+var b=mod.date()

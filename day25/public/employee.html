@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Assig1</title>
+    <script type="text/javascript">
+        var Empdetail = []
+        function EmpInput(){
+            var Name = document.getElementById("Name").value
+            var gender_arr = document.getElementsByClassName("gender")
+			var gender = ""
+			if(gender_arr[0].checked){
+				gender = gender_arr[0].value
+			}else if(gender_arr[1].checked){
+				gender = gender_arr[1].value
+			}else if(gender_arr[2].checked){
+				gender = gender_arr[2].value
+			}
+            var  date_of_birth= document.getElementById("date_of_birth").value
+            var detail = {
+                Name: Name,
+                gender: gender,
+                date_of_birth: date_of_birth,
+            }
+            Empdetail.push(detail)
+        }
+       
+    
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text"  id="Name" placeholder="Enter Name ">
+        <br>
+        Gender
+        <input type="radio" class="gender" name="gender" value="male" >Male
+        <input type="radio" class="gender" name="gender" value="female" >Female
+        <input type="radio" class="gender" name="gender" value="others">Others
+        <br>
+        <input type="date"  id="date_of_birth" placeholder="enter DOB">
+        <br>
+        <button onclick="EmpInput()">Save</button>
+	</form>
+</body>
+
+</html>

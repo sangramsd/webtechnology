@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        var Movies_detail = []
+        for (var i = 0; i < 3; i++) {
+            var Movie_Name = prompt("Enter Movies Name" + i)
+            var Price = prompt("Enter Price" + i)
+            var Seat_No = prompt("Enter Seat No" + i)
+            var detail = {
+                Movie_Name: Movie_Name,
+                Price: Price,
+                Seat_No: Seat_No,
+            }
+            Movies_detail.push(detail)
+        }
+
+        var htmlStr = "<table border=1><tr><td>Movie Name</td><td>Price</td><td>Seat No.</td></tr>"
+
+        for (let i = 0; i < Movies_detail.length; i++) {
+            htmlStr = htmlStr + "<tr><td>" + Movies_detail[i].Movie_Name + "</td><td>" + Movies_detail[i].Price + "</td><td>" + Movies_detail[i].Seat_No + "</td></tr>"
+        }
+        htmlStr = htmlStr + "</table>"
+        document.write(htmlStr)
+    </script> 
+</head>
+
+<body>
+
+</body>

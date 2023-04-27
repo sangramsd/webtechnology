@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assig6</title>
+    <script>
+        function add(){
+            var a = document.getElementById("a").value
+            var b = document.getElementById("b").value
+            var addi = parseInt(a) + parseInt(b)
+            document.getElementById("result").innerHTML = "Result is" + addi
+        }
+        function substraction(){
+            var a = document.getElementById("a").value
+            var b = document.getElementById("b").value
+            var sub = parseInt(a) - parseInt(b)
+            document.getElementById("result").innerHTML = "Result is" + sub
+        }
+        function multiplication(){
+            var a = document.getElementById("a").value
+            var b = document.getElementById("b").value
+            var mul = parseInt(a) * parseInt(b)
+            document.getElementById("result").innerHTML = "Result is" + mul
+        }
+        function divisin(){
+            var a = document.getElementById("a").value
+            var b = document.getElementById("b").value
+            var div = parseInt(a) / parseInt(b)
+            document.getElementById("result").innerHTML = "Result is" + div
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter number 1" id="a">
+    <input type="text" placeholder="Enter number 2" id="b">
+    <button onclick="add()">Add</button>
+    <button onclick="substraction()">Sub</button>
+    <button onclick="multiplication()">Mul</button>
+    <button onclick="divisin()">div</button>
+    <span id="result"></span>
+    
+</body>
+</html>

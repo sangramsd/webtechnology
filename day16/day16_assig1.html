@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assig1</title>
+        <script>
+        var Friendsnames = []
+        function Friends_name(){
+        for (var i = 0; i < 4; i++) {
+            Friendsnames.push(prompt("Enter Your Friends name"))
+        }
+        var Str = "<ol>"
+        for (var i = 0; i < Friendsnames.length; i++) {
+            Str = Str + "<li>"+Friendsnames[i]+"</li>"
+        }
+        Str = Str + "</ol>"
+        document.write(Str)
+    }
+    
+    Friends_name()
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html> 

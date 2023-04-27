@@ -1,0 +1,6 @@
+1.Install the library for react routing
+npm install react-router-dom
+
+/ -> Home
+/book -> BookAppoientment
+/list -> AppoientmentList

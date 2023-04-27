@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assig2</title>
+	<script type="text/javascript">
+		var bookdetail=[]
+		function Input(){
+			var book_name = document.getElementById("book_name").value		
+			var price = document.getElementById("price").value		
+			var author = document.getElementById("author").value		
+			var detail ={
+				book_name : book_name,
+				price : price,
+				author : author
+			}
+			bookdetail.push(detail)
+		}
+
+		function Output(){
+			var tableStr = ""
+			for (var i = 0; i < bookdetail.length; i++) {
+				tableStr = tableStr + "<tr><td>" + bookdetail[i].book_name + "</td><td>" + bookdetail[i].price + "</td><td>" + bookdetail[i].author + "</td></tr>"
+			}
+			
+			document.getElementById("table-body").innerHTML = tableStr
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text"  id="book_name" placeholder="Books Name">
+	<input type="text"  id="price" placeholder="Price">
+	<input type="text"  id="author" placeholder="Aurhor">
+    <br>
+	<button onclick="Input()">Save</button>
+	<button onclick="Output()">display</button>
+    <br>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>Book Name</td>
+				<td>Price</td>
+				<td>Author</td>
+			</tr>			
+		</thead>
+		<tbody id="table-body">
+				
+		</tbody>
+	</table>
+</body>
+</html>

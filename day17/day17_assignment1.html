@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Assig1</title>
+    <script type="text/javascript">
+        var Empdetail = []
+        function EmpInput(){
+            var Name = document.getElementById("Name").value
+            var gender_arr = document.getElementsByClassName("gender")
+			var gender = ""
+			if(gender_arr[0].checked){
+				gender = gender_arr[0].value
+			}else if(gender_arr[1].checked){
+				gender = gender_arr[1].value
+			}else if(gender_arr[2].checked){
+				gender = gender_arr[2].value
+			}
+            var  date_of_birth= document.getElementById("date_of_birth").value
+            var detail = {
+                Name: Name,
+                gender: gender,
+                date_of_birth: date_of_birth,
+            }
+            Empdetail.push(detail)
+        }
+        function Empout(){
+            var tableStr = ""
+        // var htmlStr = "<table border=1><tr><td>Id No.</td><td>Name</td><td>Phone</td><td>Salary</td></tr>"
+
+        for (let i = 0; i < Empdetail.length; i++) {
+            tableStr = tableStr + "</td><td>" + Empdetail[i].Name + "</td><td>" + Empdetail[i].gender + "</td><td>" + Empdetail[i].date_of_birth + "</td></tr>"
+        }
+        document.getElementById("table-body").innerHTML = tableStr
+    }
+    
+    </script>
+</head>
+
+<body>
+	<input type="text"  id="Name" placeholder="Enter Name ">
+    <br>
+    Gender
+	<input type="radio" class="gender" name="gender" value="male" >Male
+	<input type="radio" class="gender" name="gender" value="female" >Female
+	<input type="radio" class="gender" name="gender" value="others">Others
+    <br>
+    <input type="date"  id="date_of_birth" placeholder="enter DOB">
+	<button onclick="EmpInput()">Save</button>
+	<button onclick="Empout()">display</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>Employee Name</td>
+				<td>gender </td>
+				<td>DOB</td>
+			</tr>			
+		</thead>
+		<tbody id="table-body">
+				
+		</tbody>
+	</table>
+</body>
+
+</html>

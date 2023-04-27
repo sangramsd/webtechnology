@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1.2</title>
+    <script>
+        var na = []
+        for (var i = 0; i < 3; i++) {
+            na.push(prompt("Enter name"))
+        }
+        var htmlStr = "<ol>"
+            for (var i = 0; i< na.length ;i++){
+                htmlStr=htmlStr+"<li>"+ na[i]+"</li>"
+            }
+            htmlStr = htmlStr +"</ol>"
+
+
+            document.write(htmlStr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

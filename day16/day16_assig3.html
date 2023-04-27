@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assig3<Details></Details></title>
+    <script>
+        var bookdetail = []
+        function Input(){
+        for (var i = 0; i < 3; i++) {
+            var Name = prompt("Enter name of book" + i)
+            var Price = prompt("Enter price" + i)
+            var Author = prompt("Enter Author name" + i)
+            
+            var detail = {
+                Name: Name,
+                Price: Price,
+                Author: Author,
+            }
+            bookdetail.push(detail)
+        }
+    }
+        function Output(){
+        var htmlStr = "<table border=1><tr><td>Name</td><td>Price</td><td>Author name</td></tr>"
+
+        for (let i = 0; i < bookdetail.length; i++) {
+            htmlStr = htmlStr + "<tr><td>" + bookdetail[i].Name + "</td><td>" + bookdetail[i].Price + "</td><td>" + bookdetail[i].Author + "</td></tr>"
+        }
+        htmlStr = htmlStr + "</table>"
+        document.write(htmlStr)
+    }
+    Input()
+    Output()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+            Assignment2
+        </title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #07d700;
+            }
+            #sec_b{
+                text-align: center;
+                background-color: rgb(167, 220, 224);
+                padding-top: 70;
+                padding-bottom: 70;
+                 /* margin-left: 300; */
+                /* margin-right: 300; */ 
+                width: 500px;
+            }
+            .pass{
+                padding: 20px;
+                margin-bottom: 10px;
+                width: 250px;
+            }
+            button{
+                padding: 20px;
+                margin-bottom: 10px;
+                width: 250px;
+                background-color: #07d700;
+                border: 0px;
+            }
+            #reg{
+                color: cornflowerblue;
+            }
+            #cr{
+                text-decoration: none;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script>
+              var login_info = []
+              function save() {
+                    var a = $("#in1").val()
+                    var b = $("#in2").val()
+                    var obj = {
+                        username: a,
+                        password: b,
+                    }
+                    login_info.push(obj)
+                }
+                     $(document).ready(function(){
+                     $("#login").click(function(){
+                     save();
+                     console.log(login_info)
+                    })
+                })
+        </script>
+    </head>
+    <body>
+        <div id="main_b">
+            <div id="sec_b">
+                <div >
+                    <input type="text" class="pass" id="in1" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" class="pass" id="in2" placeholder="password">
+                </div>
+                <div>
+                    <button id="login">Login</button>
+                </div>
+                <div>
+                    <span id="reg">Not Registered? </span><a id="cr" href="Create_an_account.html">Create an account</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
